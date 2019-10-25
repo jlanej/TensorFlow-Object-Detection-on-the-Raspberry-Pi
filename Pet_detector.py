@@ -273,7 +273,7 @@ if camera_type == 'picamera':
         # i.e. a single-column array, where each item in the column has the pixel RGB value
         frame = frame1.array
         frame = np.copy(frame)
-        frame.setflags(write=1)
+        # frame.setflags(write=1)
 
         # Pass frame into pet detection function
         frame = pet_detector(frame)
