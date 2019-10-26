@@ -65,6 +65,7 @@ from utils import label_map_util
 from utils import visualization_utils as vis_util
 
 # Name of the directory containing the object detection module we're using
+MODEL_NAME = 'ssdlite_mobilenet_v2_coco_2018_05_09'
 MODEL_NAME = 'ssd_mobilenet_v2_coco_2018_03_29'
 
 # Grab path to current working directory
