@@ -68,7 +68,7 @@ from utils import visualization_utils as vis_util
 MODEL_NAME = 'ssdlite_mobilenet_v2_coco_2018_05_09'
 
 # Grab path to current working directory
-CWD_PATH = '~/tensorflow1/models/research/object_detection/
+CWD_PATH = '/home/pi/tensorflow1/models/research/object_detection'
 
 # Path to frozen detection graph .pb file, which contains the model that is used
 # for object detection.
