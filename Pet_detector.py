@@ -80,7 +80,7 @@ PATH_TO_CKPT = os.path.join(CWD_PATH,MODEL_NAME,'frozen_inference_graph.pb')
 # Path to label map file
 PATH_TO_LABELS = os.path.join(CWD_PATH,'data','mscoco_label_map.pbtxt')
 PATH_TO_LABELS = os.path.join(CWD_PATH,'data','mscoco_complete_label_map.pbtxt')
-# PATH_TO_LABELS = os.path.join(CWD_PATH,'data','pet_label_map.pbtxt')
+PATH_TO_LABELS = os.path.join(CWD_PATH,'data','pet_label_map.pbtxt')
 
 
 # Number of classes the object detector can identify
@@ -176,7 +176,7 @@ def pet_detector(frame):
         category_index,
         use_normalized_coordinates=True,
         line_thickness=8,
-        min_score_thresh=0.05)
+        min_score_thresh=0.55)
 
     # Draw boxes defining "outside" and "inside" locations.
     cv2.rectangle(frame,TL_outside,BR_outside,(255,20,20),3)

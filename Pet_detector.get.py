@@ -2,8 +2,10 @@
 # tar -xzvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
 
 
+cd /home/pi/git/tensorflow/models/research/object_detection
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 
-export PYTHONPATH=$PYTHONPATH:/home/pi/git/tensorflow/models/research/object_detection:/home/pi/tensorflow1/models/research/slim
+# export PYTHONPATH=$PYTHONPATH:/home/pi/git/tensorflow/models/research/object_detection:/home/pi/tensorflow1/models/research/slim
 cd /home/pi/git/TensorFlow-Object-Detection-on-the-Raspberry-Pi
 python3 Pet_detector.py
 
