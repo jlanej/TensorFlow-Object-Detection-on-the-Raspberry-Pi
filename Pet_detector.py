@@ -80,6 +80,7 @@ PATH_TO_CKPT = os.path.join(CWD_PATH,MODEL_NAME,'frozen_inference_graph.pb')
 # Path to label map file
 PATH_TO_LABELS = os.path.join(CWD_PATH,'data','mscoco_label_map.pbtxt')
 PATH_TO_LABELS = os.path.join(CWD_PATH,'data','mscoco_complete_label_map.pbtxt')
+PATH_TO_LABELS = os.path.join(CWD_PATH,'data','pet_label_map.pbtxt')
 
 
 # Number of classes the object detector can identify
@@ -204,7 +205,7 @@ def pet_detector(frame):
 
     # If pet has been detected inside for more than 10 frames, set detected_inside flag
     # and send a text to the phone.
-    if inside_counter > 10:
+    if inside_counter > 0:
         detected_inside = True
         message = client.messages.create(
             body = 'Your pet wants outside!',
@@ -218,7 +219,7 @@ def pet_detector(frame):
 
     # If pet has been detected outside for more than 10 frames, set detected_outside flag
     # and send a text to the phone.
-    if outside_counter > 10:
+    if outside_counter > 0:
         detected_outside = True
         message = client.messages.create(
             body = 'Your pet wants inside!',
