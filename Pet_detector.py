@@ -170,7 +170,7 @@ def pet_detector(frame):
         category_index,
         use_normalized_coordinates=True,
         line_thickness=8,
-        min_score_thresh=0.40)
+        min_score_thresh=0.10)
 
     # Draw boxes defining "outside" and "inside" locations.
     cv2.rectangle(frame,TL_outside,BR_outside,(255,20,20),3)
