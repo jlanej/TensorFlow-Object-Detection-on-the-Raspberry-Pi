@@ -1,5 +1,5 @@
 
-export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow1/models/research/object_detection:/home/pi/tensorflow1/models/research/slim
+export PYTHONPATH=$PYTHONPATH:/home/pi/git/tensorflow/models/research/object_detection:/home/pi/tensorflow1/models/research/slim
 cd /home/pi/git/TensorFlow-Object-Detection-on-the-Raspberry-Pi
 python3 Pet_detector.py
 
